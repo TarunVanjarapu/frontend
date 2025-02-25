@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card, .space{
+            width: fit-content;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0px 0px 10px #ccc;
+            text-align: center;
+            font-size: 1.2rem;
+            background-color: #0c0c0c;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+            border-bottom: 3px solid #ea0e20;
+        }
+        .card progress, .space progress{
+            accent-color: #ea0e2a;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>PROGRES TAGS...!</h1>
+        <p>The progress element represents the completion progress of a task. </p>
+    </center>  
+
+    <h1>Default progress bar without any attributes</h1>
+    <progress></progress>
+    <hr>
+
+    <h1>Static Progress bars using attributes(min, max, value)</h1>
+    <progress min="0" max="100" value="50">50%</progress>
+
+
+    <div class="card">
+        <h3>Static Progress bars</h3>
+        <hr>
+        <p>HTML <progress min="0" max="100" value="60"></progress>60%</p>
+        <p>CSS <progress min="0" max="100" value="30"></progress>30%</p>
+        <p>JAVASCRIPT <progress min="0" max="100" value="10"></progress>10%</p>
+        <p>REACT JS <progress min="0" max="100" value="46"></progress>46%</p>
+    </div>
+    <br><br><br><br><br>
+    <div class="space">
+        <h3>Storage</h3>
+        <hr>
+        <p>System <progress min="0" max="100" value="35"></progress>35%</p>
+        <p>Apps <progress min="0" max="100" value="20"></progress>20%</p>
+        <p>Images <progress min="0" max="100" value="15"></progress>15%</p>
+        <p>Games <progress min="0" max="100" value="18"></progress>18%</p>
+        <p>Videos <progress min="0" max="100" value="22"></progress>22%</p>
+    </div>
+
+    <h1>Dynamic progress Bars(using simple javascript to increment the value)</h1>
+
+    <div class="card">
+        <progress min="0" max="100" value="0" id="progress1"></progress>
+        <p id="result"></p>
+    </div>
+    <script>
+        let progress = document.getElementById('progress1');//selected that tag because to provide  value from js
+        let result = document.getElementById('result')//paragraph
+        function download(){
+            if(progress.value<100){
+                progress.value++;//incrementing
+                result.innerText = progress.value + '%';//giving progress value variable inside the paragraph
+            }else{
+                result.innerText = 'Downloaded👍'
+            }
+        }
+        //to call any function everytime we use setinterval(function_name, time_in_milli_seconds)
+        setInterval(download,100);//every 1000ms = 1s it will call the function
+    </script>
+</body>
+</html>

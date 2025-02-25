@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container form{
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        .container form input{
+            width: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .container form button{
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            border: none;
+            background-color: #0c0c0c;
+            color: #fff;
+            cursor: pointer;
+        }
+        .container form button:hover{
+            opacity: 0.7;
+        }
+        .container form input:required{
+            border: 1px solid red;
+            background-color: rgba(250, 132, 132, 0.263);
+        }
+        .container form input:read-only{
+            background-color: rgb(237, 237, 237);
+            color: #989898;
+            cursor: no-drop;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:required and :read-only</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Username</label>
+            <input type="text" name="name" id="name" required placeholder="Enter your name" title="please fill out this field">
+            <label for="">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" readonly title="This field is read-only" value="sample@gmail.com">
+            <label for="">Mobile Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your number" required title="please fill out this field">
+            <br>
+            <button type="submit" title="click to submit the form">Create Account</button>
+        </form>
+    </div>
+</body>
+</html>

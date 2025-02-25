@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input[type="checkbox"]{
+            accent-color: green;
+            width: 20px;
+            height: 20px;
+        } */
+        input[type="checkbox"]{
+            width: 100px;
+            height: 100px;
+            appearance: none;
+            background: url(https://media0.giphy.com/media/j5E5qvtLDTfmHbT84Y/200w.gif?cid=6c09b952u0163e9dg4m0trb1bgq1z85khgl236m12mr4538n&ep=v1_stickers_search&rid=200w.gif&ct=e) no-repeat center;
+            background-size: cover;
+            filter: drop-shadow(0px 10px 10px #b9343d);
+        }
+        input[type="checkbox"]:checked{
+            /* border: none;
+            outline: 2px solid green;
+            outline-offset: 5px; */
+            background: url(https://cliply.co/wp-content/uploads/2021/03/392103200_LAUGHING_EMOJI_400px.gif) no-repeat center;
+            background-size: cover;
+            filter: drop-shadow(0px 10px 10px rgb(255, 255, 53));
+        }
+        input[type="checkbox"]:default{
+            background: url(https://i.pinimg.com/originals/5a/de/92/5ade92510e11cfe2b28976d99f63b48c.gif) no-repeat center;
+            background-size: cover;
+            filter: drop-shadow(0px 10px 10px rgb(255, 255, 53));
+        
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:checked (radio, checkbox) :default</h1>
+    </center>
+    <hr>
+    <!-- <form action="">
+        <label for=""><b>How do you find us?</b></label>
+        <label for="">
+            <input type="checkbox" name="source" id="google">
+            google
+        </label>
+        <label for="">
+            <input type="checkbox" name="source" id="facebook">
+            Facebook
+        </label>
+        <label for="">
+            <input type="checkbox" name="source" id="paper">
+            Newspaper
+        </label>
+    </form> -->
+    <center>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox" default checked>
+        <input type="checkbox">
+    </center>
+
+    <!-- apply same styles for radio buttons with different design
+    <input type="text" name="" id=""> -->
+</body>
+</html>

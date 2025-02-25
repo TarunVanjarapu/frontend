@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        form{
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        form input{
+            width: 100%;
+            padding: 8px;
+            font-size: 1.1rem;
+            margin-top: 3px;
+            outline: none;
+            border: none;
+            border: 1px solid#ccc;
+            margin-bottom: 8px;
+        }
+        button{
+            width: 100%;
+            margin-bottom: 7px;
+            padding: 8px;
+            border: none;
+        }
+        button[type="submit"]{
+            background-color: darkgreen;
+            color: #fff;
+        }
+        button[type="reset"]{
+            background-color: darkorange;
+            color: #000;
+        }
+        input:disabled{
+            background-color: rgba(248, 57, 57, 0.218);
+            border: 1px solid red;
+        }
+        input:enabled{
+            border: 1px solid green;
+            background-color: rgba(120, 255, 120, 0.288);
+        }
+        button:disabled{
+            background-color: rgba(128, 128, 128, 0.459);
+            border: 1px solid gray;
+            cursor: wait;
+        }
+        .card{
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        p{
+            padding: 10px;
+            background-color: rgba(138, 255, 169, 0.393);
+            margin-top: 10px;
+            border: 1px solid green;
+        }
+        p:empty{
+            padding: 10px;
+            background-color: rgba(255, 138, 138, 0.393);
+            margin-top: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+      <form action="">
+        <label for="">Username</label>
+        <input type="text" placeholder="Enter your name">
+        <label for="">Email Address</label>
+        <input type="email" placeholder="Enter your email">
+        <label for="">Password</label>
+        <input type="pasword" placeholder="Enter your password">
+        <label for="">Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number" disabled>
+        <br>
+        <button type="submit">Create account</button>
+        <button type="button" disabled>Login</button>
+        <button type="reset">Cancel</button>
+      </form>
+      <div class="card">
+        <p>this is a paragraph</p>
+        <p>this is a paragraph</p>
+        <p></p>
+      </div>
+    </section>
+</body>
+</html>

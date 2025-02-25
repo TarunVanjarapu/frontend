@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+        .b1{
+            font-size: 1.2rem;
+            padding: 20px;
+            border: 1px solid green;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+        }
+        .b1::first-line{
+            color: green;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        .b1::first-letter{
+            font-size: 5rem;
+            color: darkorange;
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+        .c{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CSS pseudo elements</h1>
+        <p>the css pseudo elements allow you to style the elements or parts of the elements without adding any IDs or Classes to them</p>
+        <p>CSS3 introduced a new double-column (::) snytex for pseudo-elements to distinguish b/w them pesudo classes</p>
+        <p><b>selector::pseudo-element { property :value;}</b></p>
+    </center>
+    <hr>
+    <h3> :: first-line :: first-letter</h3>
+
+    <div class="b1">
+        Lorem ipsum dolor sit amet <span class="c">c</span>onsectetur adipisicing elit. Porro dolore totam ut animi, rerum earum ratione accusamus sequi. Pariatur corporis rem laborum tenetur doloribus reprehenderit aliquam earum tempora ad quod.
+        Distinctio, sunt officia ut deleniti deserunt eveniet necessitatibus exercitationem repellat ea minus. Iste totam suscipit cupiditate cumque excepturi, tempora atque placeat repudiandae eligendi rem fugit quidem. Maiores, et natus! Inventore!
+        Accusantium officiis error fugiat animi rem debitis mollitia numquam, excepturi odio, totam, cupiditate minima. Commodi veniam unde exercitationem sequi placeat esse, quis aspernatur ea animi eligendi? Voluptate, inventore! Commodi, veniam.
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            gap:30px;
+            padding: 4%;
+            background-color: #0c0c0c;
+        }
+        .left{
+            flex: 2;
+           
+        }
+        .right{
+            flex: 1;
+        }
+        .left video{
+            height: 500px !important;
+            object-fit: cover;
+        }
+        .icons{
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 8px;
+            transform: translateY(-70px);
+            border-radius: 7px;
+        }
+        .icon{
+            color: #0c0c0c;
+           font-size: 1.5rem;
+           
+        }
+        .right video{
+            height: 200px !important;
+        }
+        video{
+            width: 100%;
+            border-radius: 30px;
+            background-color: #2a2a2a;
+            position: relative;
+        }
+        .left{
+            color: #fff;
+        }
+        body{
+            background-color: #0c0c0c;
+            color:#fff;
+        }
+        .id input{
+            padding: 10px;
+            width: 300px;
+            border-radius: 100px;
+            border: none;
+            outline:none;
+            border: 1px solid #fff;
+            background-color: transparent;
+        }
+        .id{
+            display: flex;
+            gap:20px;
+            justify-content: center;
+        }
+        input::placeholder{
+            color:#fff;
+        }
+        .id button{
+            padding: 10px;
+            background-color: rgb(25, 66, 214);
+            color: #fff;
+            border-radius: 100px;
+            border: none;
+            width: 150px;
+            cursor: pointer;
+        }
+        .id button:hover{
+            opacity: 0.7;
+        }
+    </style>
+
+</head>
+<body>
+  
+    <center style="padding: 20px;">
+        <h1> <p>Your ID: <span id="myId">...</span></p></h1>
+        <br>
+        <div class="id">
+            <input type="text" id="peerIdinput" placeholder="Enter your friend meeting ID">
+           
+            <button onclick="connecttoFriend()">Connect</button>
+        </div>
+    </center>
+    <hr>
+    <section class="container">
+        <div class="left">
+            <video id="localVideo" autoplay playsinline></video>
+            <div class="icons">
+                <div class="icon"><i class="fa-solid fa-microphone-slash"></i></div>
+                <div class="icon"><i class="fa-solid fa-video-slash"></i></div>
+                <div class="icon"><i class="fa-solid fa-phone-slash"></i></div>
+            </div>
+        </div>
+
+        <div class="right">
+        <video id="remotevideo" autoplay playsinline></video>
+        </div>
+    </section>
+    <br>
+
+
+    <script>
+        var localVideo = document.getElementById('localVideo');
+        var remoteVideo = document.getElementById('remotevideo');
+        var myIdDisplay = document.getElementById('myId');
+        var friendId = document.getElementById('peerIdinput')
+
+        var peer = new Peer();//video call
+        var localStreem;
+
+        //getting my video
+        navigator.mediaDevices.getUserMedia({
+            video:true,
+            audio:true
+        }).then(data=>{
+            //if user given permission for video and audio the all data will store in stream variable
+            localStreem = data;
+            localVideo.srcObject = data; //all data giving to localVideo tag src attribute
+        }).catch((error)=>{
+            console.log("error: " + error);
+            
+        })
+
+        //generating id for my video call
+        peer.on('open', function(id){
+            myIdDisplay.innerText = id;
+        });
+
+        //answering incoming calls
+        peer.on('call', function(call){
+            call.answer(localStreem); //sending my video and audio data to friend
+            call.on('stream', function(friendVideo){
+                    remoteVideo.srcObject = friendVideo;
+            })
+        })
+
+        //connectimg to friend id
+        function connecttoFriend(){
+            if(!friendId.value){
+                console.log('please eneter friend Video call id');
+                return;
+            }
+            var call = peer.call(friendId.value, localStreem);
+            call.on('stream', friendVideo =>{
+                console.log(friendVideo);
+                document.getElementById('remotevideo').srcObject = friendVideo;
+            });
+            call.on('error', function(error){
+                console.log(error);
+            })
+        }
+
+
+    </script>
+</body>
+</html>

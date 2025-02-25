@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Creating rectangle with border or outline with background color</h1>
+    </center>
+    <hr>
+
+    <canvas id="canvas1" width="500" height="500" style="border: 3px solid #ccc;"></canvas>
+
+    <script>
+        let canvas1 = document.getElementById('canvas1').getContext('2d');//creating rectangle empty
+        canvas1.rect(200, 200, 100, 100);
+
+        canvas1.strokeStyle = 'blue';//set the outline clor
+        canvas1.linewidth = 10;//set the line width or thickness
+        canvas1.stroke()//apply the stroke
+
+        //here applying background color for the rectangle
+        //optionally background color gor rectangle
+        canvas1.fillStyle = 'black';//set fill color
+        canvas1.fill();//apply the background color
+    </script>
+</body>
+</html>

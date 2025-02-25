@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aximo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+       <div>
+        <img src="./assets/images/logo.png" alt="logo" width="150">
+        <ul>
+            <li><a href="#">Demo</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+       </div>
+       <button class="main-btn">Contact Us</button>
+    </header>
+
+    <section class="hero">
+        <div class="left">
+            <h1 class="heading">
+                A creative design <br> studio
+            </h1>
+            <p class="subtitle">We're a creative design studio specializing in meeting the needs of the new generation. We offer innovative and cutting-edge design solutions to help our clients stand out in today's fast-paced.</p>
+
+            <div class="profile">
+                <img src="https://aximo-react.vercel.app/assets/user1-DFxmj4MK.png" alt="">
+                <img src="https://aximo-react.vercel.app/assets/user3-BeUM1Eaj.png" alt="">
+                <img src="https://aximo-react.vercel.app/assets/user2-DOMdkYSu.png" alt="">
+                <p>Believed by more than a thousand people</p>
+            </div>
+            <br>
+            <div class="arrow">
+                <button class="main-btn">Book a free consultation <i class="fa-solid fa-phone"></i></button>
+                <img src="https://aximo-react.vercel.app/assets/shape1-QTZDjB63.png" alt="">
+            </div>
+          
+            
+        </div>
+        <div class="right">
+         <div class="hero-image">
+            <img src="https://aximo-react.vercel.app/assets/hero-thumb-f_JNxdoW.png" alt="">
+         </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <center>
+            <h1 class="heading">
+                We provide effective <br> design solutions <img src="./assets/images/star.png" alt="" width="70">
+            </h1>
+        </center>
+        <div class="card-container">
+            <div class="card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h1>UI/UX Design</h1>
+                <p>Focusing on user interface (UI) and user experience (UX) design enhance the usability and accessibility of digital products & app.</p>
+                <img src="./assets/images/arrow.png" alt="" width="40">
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h1>Graphic Design</h1>
+                <p>Creating visual elements such as logos, branding materials, page layout techniques, brochures, & other marketing collateral.</p>
+                <img src="./assets/images/arrow.png" alt="" width="40">
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-bolt"></i>
+                <h1>Web Design</h1>
+                <p>Designing and developing websites to ensure they are visually look and appealing, user-friendly, and functional your website.</p>
+                <img src="./assets/images/arrow.png" alt="" width="40">
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-hippo"></i>
+                <h1>Motion Graphics</h1>
+                <p>Creating animate graphics, videos for various purposes, including marketing and entertainment. To help sell a product or service.</p>
+                <img src="./assets/images/arrow.png" alt="" width="40">
+            </div>
+        </div>
+    </section>
+
+    <section class="business">
+        <div class="top">
+            <div class="top-left">
+                <h1 class="heading">
+                    We make your  <img src="./assets/images/star.png" width="70" alt=""> <br> business stand out
+                </h1>
+                <br>
+                
+            </div>
+            <div class="top-right">
+                <p>We work closely with our clients to know their objectives, target audience, unique needs, and practical design solutions.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <div class="video">
+                <img src="https://aximo-react.vercel.app/assets/video-bg-Dyw4c18R.png" alt="" width="100%">
+                <button class="main-btn" onclick="showVideo()">Play</button>
+            </div>
+            <div class="numbers">
+                <div class="number-card">
+                    <h1>15+</h1>
+                    <p>Years of experience</p>
+                </div>
+               
+                <div class="number-card">
+                    <h1>120k</h1>
+                    <p>Successful projects</p>
+                </div>
+
+                <div class="number-card">
+                    <h1>100%</h1>
+                    <p>Client satisfaction rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <dialog id="video-popup">
+        <div class="parent">
+            <iframe  src="https://www.youtube.com/embed/Vx2aLNgGoAE" title="GoPro: DarkFEST MTB Course Preview 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button onclick="closeVideo()"><i class="fa-solid fa-x"></i></button>
+        </div>
+    </dialog>
+
+    <section class="projects">
+        <center>
+            <h1 class="heading">
+                Have a wide range of <br> creative projects <img src="./assets/images/star.png" width="50" alt="">
+            </h1>
+        </center>
+
+        <div class="project-card-container">
+            <div class="project-card">
+                <img src="https://aximo-react.vercel.app/assets/project1-CoLuXzLW.png" alt="">
+                <div class="content">
+                    <h1>product Design</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi asperiores et ex maxime? Iste, aliquam.</p>
+                    <img src="./assets/images/arrow.png" alt="" width="40">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://aximo-react.vercel.app/assets/project2-NsEsB0ly.png" alt="">
+                <div class="content">
+                    <h1>product Design</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi asperiores et ex maxime? Iste, aliquam.</p>
+                    <img src="./assets/images/arrow.png" alt="" width="40">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://aximo-react.vercel.app/assets/project3-BOxrz7G1.png" alt="">
+                <div class="content">
+                    <h1>product Design</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi asperiores et ex maxime? Iste, aliquam.</p>
+                    <img src="./assets/images/arrow.png" alt="" width="40">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://aximo-react.vercel.app/assets/project4-lgnASWTf.png" alt="">
+                <div class="content">
+                    <h1>product Design</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi asperiores et ex maxime? Iste, aliquam.</p>
+                    <img src="./assets/images/arrow.png" alt="" width="40">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="working">
+        <div class="w-left">
+            <h1 class="heading">
+                Our high-quality <img src="./assets/images/star.png" width="60" alt=""> <br> working <br> processes
+            </h1>
+            <p>We focus at every stage on effective communication and collaboration between the client and ensuring that the final design meets the client s objectives and expectations.</p>
+            <p>It is important to note that these are simplified steps, and the actual work process may vary depending on the complexity of the project.</p>
+        </div>
+        <div class="w-right">
+            <details>
+                <summary>01/ Project idea</summary>
+                <p>
+                    The process starts with a detailed discussion with the client to understand their idea & goals.
+                </p>
+            </details>
+            <details>
+                <summary>02/ Brainstorming</summary>
+                <p>rainstorming is a group creativity technique in which members attempt to find a conclusion.</p>
+            </details>
+            <details>
+                <summary>03/ Launch</summary>
+                <p>The completed design assets or final product are delivered with necessary documentation.</p>
+            </details>
+        </div>
+    </section>
+
+
+    <section class="clients">
+       <center>
+        <h1 class="heading"> Clients are always <br> satisfied with us <img src="./assets/images/star.png" width="60" alt=""></h1>
+       </center>
+       <div class="reviews-container">
+        <div class="review-card">
+            <h1>Super customer service!</h1>
+            <p>Excellent customer service and I was really impressed and happy with my purchase especially as it was a last minute order which got to me in time, and when it arrived I was very happy with the design and size and so was the recipient.</p>
+            <div class="review-profile">
+                <img src="https://aximo-react.vercel.app/assets/t_thumb1-BpinlyXf.png" alt="" width="60">
+                <div>
+                    <p><b>William Jack</b></p>
+                    <p><small>Founder@XYZ</small></p>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="review-card">
+            <h1>Innovative and professional</h1>
+            <p>I can't say enough good things about them. Their team is not only incredibly talented but also highly professional. They listened to our ideas and brought to life in ways we couldn't have imagined. Their innovative approach and dedication to our project.</p>
+            <div class="review-profile">
+                <img src="https://aximo-react.vercel.app/assets/t_thumb3-V_4xMv8Y.png" alt="" width="60">
+                <div>
+                    <p><b>Smith Align</b></p>
+                    <p><small>Milano Joe</small></p>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="review-card">
+            <h1>Transformed our brand</h1>
+            <p>Our partnership with Mthemeus transformed our brand from ordinary to extraordinary. Their branding expertise and design work elevated our marketing materials to a whole new level. Our customers have taken notice, and boost in brand recognition.</p>
+            <div class="review-profile">
+                <img src="https://aximo-react.vercel.app/assets/t_thumb4-mmUGnSgS.png" alt="" width="60">
+                <div>
+                    <p><b>
+                        Danial Mark</b></p>
+                    <p><small>Marketing Director</small></p>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="review-card">
+            <h1>Exceptional creativity and vision</h1>
+            <p>Working Mthemeus was a game-changer for our brand. Their exceptional creativity & vision breathed new life into our visual. The logo they perfectly captures our essence & has become instantly recognizable. We couldn't be happier the results!
+    
+            </p>
+            <div class="review-profile">
+                <img src="https://aximo-react.vercel.app/assets/t_thumb2-D_UDSjks.png" alt="" width="60">
+                <div>
+                    <p><b>Smith Align</b></p>
+                    <p><small>Businessman</small></p>
+                </div>
+               
+            </div>
+        </div>
+       </div>
+    </section>
+
+    
+    <div class="main">
+        <marquee behavior="" direction="" scrollamount="20">
+            <div class="scroll">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+                <h1>Let's create new experiences</h1>
+                <img src="./assets/images/star.png" width="60" alt="">
+            </div>
+        </marquee>
+    </div>
+
+
+    <section class="team">
+        <center>
+            <h1 class="heading">We have a team of <br> creative people  <img src="./assets/images/star.png" width="60" alt=""></h1>
+        </center>
+        <br>
+        <div class="team-container">
+           <div class="member-card">
+            <div class="member">
+                <img src="https://aximo-react.vercel.app/assets/team1-DmWE10zh.png" alt="">
+                <div class="icons">
+                    <div class="icon"><i class="fa fa-brands fa-facebook"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-instagram"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-linkedin"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-github"></i></div>
+                </div>
+            </div>
+            <h1>Andrew Mark</h1>
+            <p>Creative Director</p>
+           </div>
+
+           <div class="member-card">
+            <div class="member">
+                <img src="https://aximo-react.vercel.app/assets/team2-CCsDsUp2.png" alt="">
+                <div class="icons">
+                    <div class="icon"><i class="fa fa-brands fa-facebook"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-instagram"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-linkedin"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-github"></i></div>
+                </div>
+            </div>
+            <h1>Jack Taylor</h1>
+            <p>Senior Designer</p>
+           </div>
+
+           <div class="member-card">
+            <div class="member">
+                <img src="https://aximo-react.vercel.app/assets/team3-Dq8iIK3F.png" alt="">
+                <div class="icons">
+                    <div class="icon"><i class="fa fa-brands fa-facebook"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-instagram"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-linkedin"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-github"></i></div>
+                </div>
+            </div>
+            <h1>Martine Joy</h1>
+            <p>Project Manager</p>
+           </div>
+
+
+           <div class="member-card">
+            <div class="member">
+                <img src="https://aximo-react.vercel.app/assets/team4-CN3ED17F.png" alt="">
+                <div class="icons">
+                    <div class="icon"><i class="fa fa-brands fa-facebook"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-instagram"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-linkedin"></i></div>
+                    <div class="icon"><i class="fa fa-brands fa-github"></i></div>
+                </div>
+            </div>
+            <h1>Adam Straw</h1>
+            <p>Web Developer</p>
+           </div>
+        </div>
+    </section>
+
+
+    <script>
+        let videopopup = document.getElementById('video-popup');
+       function showVideo(){
+        videopopup.showModal()
+       }
+
+       function closeVideo(){
+        videopopup.close()
+       }
+    </script>`
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 30px;
+            background-color: lightgray;
+        }
+        .container .b1, .container .b2{
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container .b1 .circle1{
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            background-color: darkgoldenrod;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .container .b2 .circle2{
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            background-color: darkgoldenrod;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+        }
+        .b2{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Position Absolute</h1>
+        <p>The position absolute element will depends on body but when we give position relative for that parent then the child will depends on that parent only.</p>
+    </center>
+    <section class="container">
+        <div class="b1">
+            <h1>Without relative for parent</h1>
+            <div class="circle1"></div>
+        </div>
+        <div class="b2">
+            <h1>With relative for parent</h1>
+            <div class="circle2"></div>
+        </div>
+    </section>
+</body>
+</html>

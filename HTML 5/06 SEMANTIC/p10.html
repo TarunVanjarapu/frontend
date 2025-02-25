@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            background-color: rgb(232, 232, 232);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 320px;
+            /* text-align: center; */
+        }
+        .box{
+            background-color: rgba(175, 175, 175. 0.87);
+            margin-bottom: 10px;
+            padding: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            border-radius: 2px;
+            border-top: 2px solid rgba(128, 128, 128, 0.858);
+        }
+        .box input{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: rgb(122, 119, 119);
+            width: 100%;
+        }
+        .box i{
+            color: gray;
+        }
+        button{
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(230, 86, 34);
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+        button:hover{
+            opacity: 0.7;
+        }
+        form small{
+            color: gray;
+        } 
+    </style>
+</head>
+<body>
+    <section class="container">
+        <form action="">
+            <label for="">Username</label>
+            <div class="box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username">
+            </div>
+
+            <label for="">Password</label>
+            <div class="box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="passworn" placeholder="**********">
+            </div>
+
+            <button>LOGIN</button> 
+            <br>
+            <center>
+            <small>Copyright &copy; 2024 Be Practical, Inc</small>
+            </center>
+        </form>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

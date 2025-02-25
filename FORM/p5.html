@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>SELECT TAG </title>
+        <style>
+            select{
+                border: none;
+                outline: none;
+                border: 1px solid #ccc;
+                padding: 10px;
+                display: block;
+                margin: auto;
+                font-size: 1.1rems;
+
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>FORM TAG - SELECT TAG</h1>
+            <p>to creste dropdowns in html we can use select tags followed by multiple options</p>
+        </center>
+        <hr>
+
+        <label for="courses">Courses</label>
+        <select name="courses" id="courses">
+            <option value=""disabled selected>Select any course</option>
+            <option value="mern">MERN Fullstack course</option>
+            <option value="mean">MEAN Fullstack course</option>
+            <option value="python">PYTHON Fullstack course</option>
+            <option value="java">JAVA Fullstack course</option>
+        </select>
+
+        <hr>
+
+        <select name="courses" id="courses2">
+            <option value=""disabled selected>Select your course</option>
+
+            <optgroup label="MERN Fullstack">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="node js">Node js</option>
+                <option value="mongo DB">Mongo DB</option>
+                <option value="express">Express</option>
+            </optgroup>
+            <hr>
+
+            <optgroup label="JAVA Fullstack">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="java">Java</option>
+            </optgroup>
+            <hr>
+
+            <optgroup label="python Fullstack">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="python">Python</option>
+            </optgroup>
+        </select>
+    </body>
+</html>

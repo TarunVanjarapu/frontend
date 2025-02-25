@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            background-color: #0c0c0c;
+        }
+        header ul{
+            list-style-type: none;
+
+        }
+      
+        header>ul{
+            display: flex;
+        }
+        header a{
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: 0.7s;
+            background-color: #0c0c0c;
+            color: #fff;
+           
+        }
+        .services-list, .more-services-list{
+            display: none;
+            position: absolute;
+
+        }
+        .more-services-list{
+            right: -170px;
+            top: 0;
+        }
+        .services:hover .services-list{
+            display: block;
+        }
+        .services, .more-services{
+            position: relative;
+        }
+        .more-services:hover .more-services-list{
+            display: block;
+        }
+
+        ul li a:hover{
+            background-color: #f5e730;
+            color: #000;
+        }
+        .services-list a, .more-services-list a{
+            min-width: 150px;
+            border-bottom: 1px solid #fff;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href=""> Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact us</a></li>
+
+            <li class="services">
+                <a href="#">Services</a>
+                <ul class="services-list">
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="">Web Development</a></li>
+                    <li class="more-services">
+                        <a href="">Courses>></a>
+
+                        <ul class="more-services-list">
+                            <li><a href="">MERN fullstack</a></li>
+                            <li><a href="">MEAN Fullstack</a></li>
+                            <li><a href="">Python Fullstack</a></li>
+                            <li><a href="">Java Fullstack</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>

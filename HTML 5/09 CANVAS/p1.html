@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CANVAS</title>
+</head>
+<body>
+    <center>
+        <h1>This is canvas tag..!</h1>
+        <p>The html canvas element provides html a bitmaps surface to work with. it is usedto draw graphics on the webpage teh <b>HTML 5 canvas tag</b>is used to draw graphics using scripting language like javascript</p>
+    </center>
+    <hr>
+
+    <canvas>This is first canvas tag</canvas>
+    <canvas id="myCanvas1" width="300" height="100" style="border: 2ox solid#000;"></canvas>
+    <p><b>Note:it is always necessray to specify the id attribute and the height & width attribute to define the size of the canvas.You can have multiple canvas elements on one HTML page</b></p>
+    <hr>
+
+    <center>
+        <h1>fillRect()</h1>
+    </center>
+
+    <canvas id="canvas2" width="300" height="300" style="border: 3px solid #ccc;"></canvas>
+
+    <script>
+        let canvas2 = document.getElementById('canvas2').getContext('2d');
+
+        canvas2.fillStyle = "#578E7E";
+        canvas2.fillRect(50, 25, 200, 200);
+    </script>
+</body>
+</html>

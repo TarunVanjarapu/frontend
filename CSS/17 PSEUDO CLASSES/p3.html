@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+
+        }
+        aside{
+            height: 100vh;
+            overflow: auto;
+            background-color: rgb(34, 0, 206);
+            width: 200px;
+            padding: 10px;
+        }
+        main{
+            height: 100vh;
+            overflow: auto;
+            background-color: white;
+            flex: 1;
+        }
+        aside ul{
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li{
+            padding:10px;
+            margin-bottom: 10px;
+            background-color: #ffffff27;
+            border-radius: 5px;
+        }
+        aside ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        li:hover{
+            background-color: #fff ;
+           
+        }
+        li:hover a{
+            color: #000;
+        }
+        header{
+            padding: 20px;
+            /* border-bottom: 1px solid #ccc; */
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px #f1f1f1;
+        }
+        main section{
+            min-height: 100vh;
+        }
+        section img{
+            width: 100%;
+            margin-top: 20px;
+        }
+        main section{
+            padding: 4%;
+            display: none;
+        }
+       main section:target{
+        display: block;
+       }
+       section p{
+        line-height: 1.7;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+       }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#mern">Mern Fullstack Course</a></li>
+                    <li><a href="#mean">Mean Fullstack Course</a></li>
+                    <li><a href="#java">Java Fullstack Course</a></li>
+                    <li><a href="#python">Python Fullstack Course</a></li>
+                    <li><a href="#marketing">Digital Marketing Course</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <header>
+                <h4>Course Content</h4>
+            </header>
+
+            <section id="mern">
+                <h1>Mern Fullstack Course</h1>
+                <hr>
+                <img src="https://blog.pwskills.com/wp-content/uploads/2023/12/MERN-FULL-STACK_CTA.png" alt="">
+                <br>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+
+            </section>
+            <section id="mean">
+                <h1>Mean Fullstack Course</h1>
+                <hr>
+                <img src="https://kvch.in/assets-new/img/banner/full_stack_development.webp" alt="">
+                <br>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+
+            </section>
+            <section id="java">
+                <h1>Java Fullstack Course</h1>
+                <hr>
+                <img src="https://i.ytimg.com/vi/_QnktafXuPM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAJRZa3IOegy8qQDEoGfyaXBwb6jg" alt="">
+                <br>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+
+            </section>
+            <section id="python">
+                <h1>Python Fullstack Course</h1>
+                <hr>
+                <img src="https://kvch.in/assets-new/img/banner/python_full_stack_og_image.webp" alt="">
+                <br>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+
+            </section>
+            <section id="marketing">
+                <h1>Digital Marketing Course</h1>
+                <hr>
+                <img src="https://courses.iid.org.in/public//uploads/media_manager/628.jpg" alt="">
+                <br>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fugiat? Blanditiis placeat animi accusamus eum molestias itaque laborum ut facere quis possimus nemo ad quibusdam voluptatum saepe, quos, labore velit?</p>
+
+            </section>
+        </main>
+    </section>
+</body>
+</html>

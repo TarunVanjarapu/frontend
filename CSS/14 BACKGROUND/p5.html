@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            padding: 4px;
+        }
+        .container div{
+            width: 300px;
+            height: 100px;
+            background-image: url(https://t4.ftcdn.net/jpg/03/44/51/15/360_F_344511538_wK1Mkf76TtkkKT12JVZAdfXNQrdSs9yf.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .b1{
+            background-color: rgb(47, 219, 121);
+            background-blend-mode: multiply;
+        }
+        .b2{
+            background-color: rgb(47, 219, 121);
+            background-blend-mode: normal;
+        }
+        .b3{
+            background-color: rgb(47, 219, 121);
+            background-blend-mode: hard-light;
+        }
+        .b4{
+            background-color: rgb(47, 219, 121);
+            background-blend-mode: difference;
+        }
+        .b5{
+            background-color: rgb(47, 219, 121);
+            background-blend-mode: lighten;
+        }
+        .b6 h1{
+            text-align: center;
+            text-transform: uppercase;
+            background-color: green;
+            mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>BACKGROUND-BLEND-MODE</h1>
+    </center>
+    <hr>
+    <section class="container">
+        <div class="b1">
+            <h1>multiply</h1>
+        </div>
+
+        <div class="b2">
+            <h1>Normal</h1>
+        </div>
+
+        <div class="b3">
+            <h1>Hard-Light</h1>
+        </div>
+
+        <div class="b4">
+            <h1>Difference</h1>
+        </div>
+
+        <div class="b5">
+            <h1>Lighten</h1>
+        </div>
+
+        <div class="b6">
+            <h1>Out Door Club</h1>
+        </div>
+    </section>
+</body>
+</html>

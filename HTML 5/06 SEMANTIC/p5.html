@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS introduction</title>
+    <style>
+        section{
+            background-color: black;
+            height: 100vh;
+            padding: 20px;
+            /* important if we use display:flex property for parent then only gap, justify-content and align-items properties will work otherwise will not work */
+            display: flex;
+            /* to provide gap between childs we use cap property */
+            gap: 20px;
+            /* to move childs in x-axis */
+            justify-content: center;
+            /* to move childs in y-axis */
+            align-items: center;
+        }
+        .container .card{
+            width: 200px;
+            height: 200px;
+            background-color: darkgoldenrod;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+            <h1>1</h1>
+        </div>
+         <div class="card">
+            <h1>2</h1>
+        </div> 
+        <div class="card">
+            <h1>3</h1>
+        </div>
+         <div class="card">
+            <h1>4</h1>
+        </div> 
+        <div class="card">
+            <h1>5</h1>
+        </div>
+    </section>
+</body>
+</html>

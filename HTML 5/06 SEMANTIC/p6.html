@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            background-color:  rgb(11, 43, 32);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+        .links{
+            display: flex;
+            list-style-type: none;
+            gap: 30px;
+        }
+        .links li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .links li a:hover{
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+        .solid-btn{
+            border: none;
+            padding: 8px 20px;
+            border-radius: 100px;
+            color: #fff;
+            font-size: 1.2rem;
+            border: 1px solid #fff;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .solid-btn:hover{
+            color: rgb(11, 43, 32);
+            background-color: #fff;
+        }
+        main{
+            padding: 30px;
+            line-height: 1.7;
+        }
+        main section{
+            padding: 30px;
+            background-color: rgb(229, 243, 247);
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgb(38, 65, 74);
+        }
+        main section h1{
+            color: rgb(34, 110, 133);
+        }
+        main section p{
+            font-size: 1.1rem;
+        }
+        footer{
+            padding: 30px;
+            background-color: #f1f1f1;
+        }
+        .all-links{
+            display: flex;
+            gap: 40px;
+        }
+        footer .card{
+            width: 500px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .icons i{
+            font-size: 1.6rem;
+        }
+        .icons{
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .icons a{
+            color: rgb(38, 65, 74);
+        }
+        .footer-links{
+            list-style-type: none;
+            /* font-size: 1.2rem; */
+            line-height: 1.7;
+        }
+        .footer-links li a{
+            text-decoration: none;
+            color: #000;
+        }
+        .footer-links i{
+            color: rgb(238, 114, 25);
+        }
+        .btn-div{
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+        .orange-btn{
+            border: none;
+            background-color: orangered;
+            padding: 8px 25px;
+            font-size: 1.1rem;
+            color: #fff;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .btn-div h1{
+            font-weight: 400;
+            color: rgb(38, 65, 74);
+        }
+        .btn-div p{
+            font-size: 1.1rem;
+        }
+        .orange-btn:hover{
+            opacity: 0.7;
+        }
+        .last-section{
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            color: rgb(38, 65, 74);
+        }
+    </style>
+</head>
+<body>
+    <!-- <center>
+        <h1>HEADER TAG...!</h1>
+        <p>the header element represents the introductory content of it nearest ancestor sectioning content or sectioning root element.A header typically contains a group of introductory or navigational links or aida.</p>
+    </center> -->
+
+    <hr>
+    <header>
+            <img src="https://cdn.prod.website-files.com/6706114f63d25947a98f7dd3/6706114f63d25947a98f7de3_brand-logo.svg" class="logo" alt="loading">
+
+        <nav>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Pages</a></li>
+            </ul>
+        </nav>
+
+        <button class="solid-btn">Get For Free</button>
+        </div>
+    </header>
+
+    <!-- <center>
+        <h1>MAIN TAG</h1>
+        <p>the main element represents the main content of the body of a website or document</p>
+    </center> -->
+
+    <main>
+        <section>
+            <h1>About us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit fugit animi veritatis consequatur recusandae iure corrupti nulla. Dolorum voluptatem asperiores sed voluptatibus quia. Quos vitae iusto quis, ad quia magni.
+            Eaque nemo facilis voluptas ea maxime pariatur fugit dolore. Nulla quis quisquam accusantium cumque corrupti est culpa voluptate, deserunt tempore doloremque excepturi, et recusandae! Reiciendis illo ipsa sunt eos porro.
+            Dicta deleniti ut nesciunt doloremque architecto. Esse delectus nihil debitis voluptate dignissimos architecto maxime nulla dolorem, doloribus et earum ipsam perspiciatis? Asperiores officiis, sequi unde ab illo nobis maxime cum.</p>
+        </section>
+
+        <section>
+            <h1>Contact us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum odio, facilis maxime voluptates assumenda porro iusto voluptate, officiis quia dolore ut deleniti laboriosam sunt illum esse voluptas! A, aperiam tenetur?
+            In ea laborum illo autem libero sequi voluptate nihil quas adipisci consequatur? Quo quas quis quibusdam autem est eum blanditiis omnis dolores natus a praesentium ipsum doloremque, sunt accusantium esse?
+            Consequuntur, autem mollitia nemo ipsa officia, dolores facere at qui laudantium facilis expedita porro quaerat libero repellat. Eum excepturi fugit incidunt? Ullam autem nobis numquam incidunt labore deleniti, magni nesciunt.</p>
+        </section>
+
+        <section>
+            <h1>Services</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis sint earum dolores assumenda commodi facere ipsa tempore in modi qui officia suscipit minus quis cum vel voluptatibus, similique reiciendis.
+            In quibusdam amet minus illum dicta, officia, nisi hic, deserunt ullam minima laborum odit sunt assumenda sit. Voluptatem voluptatum non, doloribus enim, sed impedit dolor minima fugit dolorem, veniam error.
+            Quo laboriosam harum provident adipisci perspiciatis quae aliquam omnis minima aperiam nisi cum ullam, voluptatibus, at, fugiat autem? Ab nulla deleniti soluta veniam facere numquam voluptatum non qui provident accusantium?</p>
+        </section>
+    </main>
+
+
+     <!-- <center>
+        <h1>FOOTER TAG</h1>
+        <p>footer element is the last section of the website. this is used to place some navigational links or social media links and privacy policy links and copyrights</p>
+    </center> -->
+
+
+    <footer>
+        <div class="all-links">
+            <div class="card">
+                <img src="https://cdn.prod.website-files.com/6706114f63d25947a98f7dd3/6706114f63d25947a98f7e01_brand-logo-dark.svg" alt="loading...">
+    
+                <br>
+                <p> &copy; Homeifye dedicated to revolutionizing the real estate experience. Through innovation and excellence.</p>
+    
+                    <div class="icons">
+                      <a href="https://webflow.com/templates/html/homeifye-real-estate-website-template" target="_blank">  <i class="fa-brands fa-instagram"></i></a>
+                      <a href="#">  <i class="fa-brands fa-facebook"></i></a>
+                      <a href="#">  <i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+            </div>
+            
+
+            <div class="card">
+                <ul class="footer-links">
+                    <li><b>Pages</b></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+    
+            </div>
+    
+
+            <div class="card">
+                <ul class="footer-links">
+                    <li><b>Template</b></li>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Licenses</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">404</a></li>
+                </ul>
+    
+            </div>
+     
+
+            <div class="card">
+                <ul class="footer-links">
+                    <li><b>Contact</b></li>
+                    <li><i class="fa-solid fa-phone"></i> (62) 1829017</li>
+                    <li><i class="fa-regular fa-envelope"></i> hello@realtifye.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 2912 Meadowbrook Road, Los Angeles, CA 90017</li>
+                </ul>
+    
+            </div>
+        </div>
+    
+
+        <hr>
+
+       <div class="btn-div">
+        <div>
+            <h1>Need Help Customizing Your Site?</h1>
+            <p>Let us personalize your pages or make adjustments to help your site shine.</p>
+        </div>
+        <button class="orange-btn">Get in touch <i class="fa-solid fa-arrow-right-long"></i></button>
+     </div>
+     <br>
+
+     <hr>
+     <br>
+
+     <div class="last-section">
+        <p>&copy; All rights reserved. Flowfye.</p>
+
+        <p>Powered by Webflow.</p>
+     </div>
+    
+    </footer>
+</body>
+</html>

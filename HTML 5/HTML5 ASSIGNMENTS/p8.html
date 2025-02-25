@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         *{
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+         dialog{
+            width: 400px;
+            border: none;
+            padding: 30px;
+        }
+        p{
+            text-align: center;
+        }
+        .header{
+            display: flex;
+            /* align-items: center;   */
+            justify-content: end;
+        }
+        .img{
+            text-align: center;
+            font-size: 5rem;
+            color: rgb(0, 68, 255);
+        }
+        .ok-btn{
+            border: none;
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(0, 68, 255);
+            color: #ffff;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .ok-btn:hover{
+            background-color: #ffff;
+            color: rgb(0, 68, 255);
+            border: 1px solid rgb(0, 68, 255);
+        }
+        .close{
+            border: none;
+            font-size: 1.2rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .close:hover{
+            color: rgb(0, 68, 255);
+        }
+        .img h3{
+            font-size: 2rem;
+        }
+        .mark{
+            display: flex;
+            justify-content: end
+        }
+        .pic{
+            text-align: center;
+            color: rgba(255, 0, 0, 0.877);
+            font-size: 5rem;
+        }
+        .pic h3{
+            font-size: 2rem;
+        }
+        .wrong{
+            border: none;
+            font-size: 1.2rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .wrong:hover{
+            color: rgb(255, 0, 0);;
+        }
+        .not-btn{
+            border: none;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(255, 0, 0, 0.877);
+            color: #ffff;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .not-btn:hover{
+            background-color: #ffff;
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showsuccesspopup()">Success</button>
+
+    <dialog id="popup1">
+        <div class="header">
+            <button class="close" onclick="closesuccesspopup()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="img">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Success</h3>
+        </div>
+       
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam enim voluptate quia ad dolor commodi eveniet facere </p>
+        <button class="ok-btn" type="button">Continue</button>
+    </dialog>
+
+    <script>
+        let popup1 = document.getElementById('popup1');
+        function showsuccesspopup(){
+            popup1.showModal();
+        }
+        function closesuccesspopup(){
+            popup1.close();
+        }
+    </script>
+
+    <br><br><br><br><br><br>
+
+    <button onclick="showerrorpopup()">Error</button>
+
+    <dialog id="popup2">
+        <div class="mark">
+            <button class="wrong" onclick="closeerrorpopup()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="pic">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h3>Error</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quibusdam iusto maiores ipsa provident velit </p>
+        <button class="not-btn" type="botton">Try Again</button>
+    </dialog>
+
+
+        <script>
+            let popup2 = document.getElementById('popup2');
+            function showerrorpopup(){
+                popup2.showModal();
+            }
+            function closeerrorpopup(){
+                popup2.close();
+            }
+        </script>
+</body>
+</html>

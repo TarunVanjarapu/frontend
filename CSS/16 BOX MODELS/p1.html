@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PADDING</title>
+    <style>
+        .csspadding{
+            background-color: lightcoral;
+            width: fit-content;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .csspadding.p1{
+            padding: 50px;/*for all sides*/
+        }
+        .csspadding.p2{
+            padding: 25px 50px;/*first one for top and bottom and second one for left an right*/
+        }
+        .csspadding.p3{
+            padding: 25px 50px 75px;/*first one top second one left and right third one bottom*/
+        }
+        .csspadding.p4{
+            padding: 25px 50px 75px 100px;/*1 top, 2 right, 3 bottom, 4 left*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>CSS Padding</h1>
+        <p>The css padding properties allow you to set the spacing b/w the content of an lement amd its border (or the edge of the element's box, if it has no defined border)</p>
+    </div>
+    <hr>
+
+
+    <section class="csspadding">
+        <h1 class="p1">This is the first h1</h1>
+        <h1 class="p2">This is the second h1</h1>
+        <h1 class="p3">This is the third h1</h1>
+        <h1 class="p4">This is the fourth h1</h1>
+    </section>
+
+</body>
+</html>

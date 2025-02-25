@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css border</title>
+    <style>
+        .cssborder{
+            padding: 30px;
+        }
+        .cssborder h1{
+            padding: 30px;
+            width: 300px;
+            background-color: rgb(255, 201, 179);
+        }
+        .b1{
+            border-width: 10px;
+            border-color: darkcyan;
+            border-style: solid;
+        }
+        .b2{
+            border-width: 10px;
+            border-color: darkcyan red;
+            border-style: double;   
+        }
+        .b3{
+            border-width: 10px;
+            border-color: darkcyan red green;
+            border-style: dashed;
+        }
+        .b4{
+            border-width: 10px;
+            border-color: darkcyan red green blue;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <h1>CSS border</h1>
+        <p>Border appear directly b/w margin and padding. it can be either predefined style like solid line, dotted line or double line or it can be image</p>
+    </section>
+    <hr>
+    <div class="cssborder">
+        <h1 class="b1">this is the 1 heading</h1>
+        <h1 class="b2">this is the 2 heading</h1>
+        <h1 class="b3">this is the 3 heading</h1>
+        <h1 class="b4">this is the 4 heading</h1>
+    </div>
+</body>
+</html>

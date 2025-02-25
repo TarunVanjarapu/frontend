@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            background-color: rgb(245, 245, 245);
+            min-height: 100vh;
+            gap:30px;
+        }
+        .left{
+            flex: 1;
+            background-color: #fff;
+            padding: 4%;
+        }
+        .right{
+            flex: 2;
+            background-color: #fff;
+        }
+        header{
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        header h1{
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+        .left input{
+            width: 100%;
+            padding: 8px;
+            font-size: 1.1rem;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .left button{
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 1.1rem;
+            background-color: #007a41;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .left button:hover{
+            opacity: 0.7;
+        }
+
+        #qrCode{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .qr-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+        }
+        #qrCode img{
+            width: 100%;
+        }
+        #qrCode h2{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="left">
+        <form action="">
+            <label for="">Enter any text to generate QR code</label>
+            <input type="text" placeholder="Enter text.."  id="text">
+            <button onclick="generateQR()" type="button">Generate QR</button>
+        </form>
+        </div>
+        <div class="right">
+            <header>
+                <h1>QR CODE</h1>
+            </header>
+          <div class="qr-container">
+            <div id="qrCode">
+                <img src="https://cdn.dribbble.com/userupload/24258715/file/original-79c81952fae1e8120b9404751b69d858.gif" alt="">
+                <h2>No QR Code</h2>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <script>
+        var textInput = document.getElementById('text');
+        var qrCodeDiv = document.getElementById('qrCode');
+        function generateQR(){
+            qrCodeDiv.innerHTML = "";//empty of div
+            // if(text.tri)
+            new QRCode(qrCodeDiv, textInput.value); //div, text
+            
+        }
+    </script>
+    
+</body>
+</html>

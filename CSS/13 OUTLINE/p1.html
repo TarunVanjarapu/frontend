@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outline</title>
+    <style>
+        .heading{
+            width: 300px;
+            padding: 10px;
+            background-color: lightcoral;
+            border: 5px solid red;
+            outline: 10px solid green;
+            outline-offset: 10px;/* to provide gap between border and outline*/
+            margin: auto;
+            border-radius: 100px;
+        }
+        .profile{
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 100px;
+            border: 5px solid #2c11f6;
+            padding: 5px;/*space b/w image(content) and border*/
+            outline: 10px solid #4c35f555;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .profile:hover{
+            outline: 30px solid #4c35f555;
+            border: 15px solid #2c11f6;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CSS OUTLINE</h1>
+        <p>css outline property allows us to set the border around the element thet mean after the border we can apply this outline border same like a border type</p>
+    </center>
+    <hr>
+    <h1 class="heading">This is the heading</h1>
+    <br><br><br>
+    <hr>
+
+    <img src="https://i.pinimg.com/736x/5d/2d/6b/5d2d6b57f1b7172a629313dedb164897.jpg" class="profile" alt="">
+</body>
+</html>

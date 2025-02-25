@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <style>
+            form{
+                width: 350px;
+                /* border: 2px solid rgb(84, 84, 84); */
+                padding: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: auto;
+                margin-top: 30px;
+                box-shadow: 0px 0px 10px rgb(200, 200, 200); /x-axis move y-axis blurness of the shadow color of the shadow/
+            }
+            input{
+                padding: 10px;
+                width: 100%;
+                border: none;
+                outline: none;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-top: 3px;
+            }
+            input:hover{
+                border: 1px solid #370fe6;
+                background-color: #360fe61e;
+            }
+
+            input[type="submit"]{
+                background-color: #370fe6;
+                color: #fff;
+                padding: 13px;
+                font-size: 15px;
+            }
+            input[type="submit"]:hover{
+                background-color: transparent;
+                color: #370fe6;
+            }
+            label{
+                color: #393939;
+            }
+
+            input[type="reset"]{
+               border: 1px solid #e60f1a;
+               color: #e60f1a;
+               background-color: transparent;
+               margin-top: 10px;
+               font-size: 15px;
+               padding: 13px;
+            }
+            input[type="reset"]:hover{
+                background-color: #e60f1a;
+                color: #fff;
+
+            }
+        </style>
+    </head>
+    <body>
+    <form autocomplete="on">
+        <h3>Create account</h3>
+        <hr>
+        <br>
+        <label for="username">Username</label> <br>
+        <input type="text" name="username" id="username" placeholder="Enter your name" required> <br> <br>
+
+        <label for="email">Email Address</label> <br>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com"  required> <br> <br>
+
+        <label for="password">Password</label> <br>
+        <input type="password" placeholder="Enter your password" id="password" name="password" required> <br> <br>
+
+        <label for="c_password">Confirm Password</label> <br>
+        <input type="password" name="confirm_password" id="c_password" placeholder="conf your password" required>
+        <br> <br>
+        <input type="submit" value="create account"> <br>
+        <input type="reset" value="Cancel">
+    </form>
+    </body>
+</html>

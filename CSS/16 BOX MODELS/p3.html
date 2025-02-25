@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css margin</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .cssmargin{
+            padding: 30px;
+        }
+        .cssmargin h1{
+            padding: 20px;
+            text-align: center;
+            background-color: lightcoral;
+            border: 2px solid #000;
+        }
+        .m1{
+            margin: 40px;/*for all sides*/
+        }
+        .m2{
+            margin: 25px 50px;/*1 for top nad bottom and 2 for left and right*/
+        }
+        .m3{
+            margin: 25px 50px 75px;/* 1 for top 2 for left and right 3 for bottom*/
+        }
+        .m4{
+            margin: 25px 50px 75px 100px;/*1 for top 2 for right 3 for bottom 4 for left*/
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <h1>CSS Margin</h1>
+        <p>THe css margin properties allows us to set the spacing around the border of an eleent's box</p>
+    </section>
+    <hr>
+
+    <section class="cssmargin">
+        <h1 class="m1">this is the heading</h1>
+        <h1 class="m2">this is the heading</h1>
+        <h1 class="m3">this is the heading</h1>
+        <h1 class="m4">this is the heading</h1>
+    </section>
+</body>
+</html>

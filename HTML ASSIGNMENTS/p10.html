@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>foods</title>
+        <style>
+            *{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+           select{
+            border: none;
+            outline: none;
+            border: 1px solid rgb(138, 135, 135);
+            padding: 10px;
+            margin: auto;
+            display: block;
+            border-radius: 10px;
+            font-size: 1.2rem;
+           } 
+           label{
+            color: rgb(0, 0, 255);
+            display: block;
+            text-align: center;
+           }
+           select:hover{
+            background-color: rgba(128, 129, 130, 0.16);
+            cursor: pointer;
+           }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1> List of Indian foods</h1>
+        </center>
+        <hr>
+
+        <label for="indian foods">Indian Foods</label><br>
+        <select name="indian foods" id="Indian Foods">
+            <option value=""disabled selected>Select any Food</option>
+
+            <optgroup label="North Indian Foods">
+                <option value="chole bathure">Chole Bathure</option>
+                <option value="dilli ki chat">Dilli ki Chat</option>
+                <option value="rogan josh">Rogan Josh</option>
+                <option value="dal tadka">Dal Tadka</option>
+                <option value="dal makhani">Dal Makhani</option>
+            </optgroup>
+            <hr>
+            <optgroup label="South Indian foods">
+                <option value="hyderabadi biryani">Hyedrabadi Biryani</option>
+                <option value="samabr">Sambar</option>
+                <option value="idly">Idly</option>
+                <option value="dosas">Dosas</option>
+                <option value="kerala prawn curry">Kerala Prawn Curry</option>
+            </optgroup>
+            <hr>
+            <optgroup label="East Indin Foods">
+                <option value="momos">Momos</option>
+                <option value="thukpa">Thukpa(soup)</option>
+                <option value="machher jhol">Machhar Jhol</option>
+                <option value="tomato achaar">Tomato Achaar</option>
+                <option value="pork ukra">Pork Ukra</option>
+            </optgroup>
+            <hr>
+            <optgroup label="West Indian foods">
+                <option value="jerk chicken">Jerk Chicken</option>
+                <option value="ropa vieja">Ropa Vieja</option>
+                <option value="pav bhaji">Pav Bhaji</option>
+                <option value="vada pav">Vada Pav</option>
+                <option value="tostones">Tostones</option>
+            </optgroup>
+        </select>
+    </body>
+</html>

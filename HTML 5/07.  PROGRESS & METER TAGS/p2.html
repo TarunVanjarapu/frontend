@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: fit-content;
+            padding: 20px;
+            background-color: aliceblue;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        meter{
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>METER TAG</h1>
+    </center>
+    <hr>
+
+    <h1>Default meter tag without any attribute</h1>
+    <div class="card">
+        <meter></meter>
+    </div>
+    <hr>
+
+    <h1>Static Meter tag using(min, max, value, low, high)</h1>
+    <div class="card">
+        <meter value="40" min="0" max="100"></meter>
+    </div>
+    <hr>
+
+    <h1>Creating meter tag with low value</h1>
+    <div class="card">
+        <meter value="20" min="0" max="100" low="40"></meter>
+        <p>low = 40</p>
+        <hr>
+        <p> current value = 20</p>
+    </div>
+    <hr>
+
+    <h1>Creating meter tag with high value indicator</h1>
+    <div class="card">
+        <meter value="90" min="0" max="100" high="75" low="20"></meter>
+        <p>High = 75</p>
+        <hr>
+        <p>low = 20</p>
+        <hr>
+        <p>current value = 90</p>
+    </div>
+    <hr>
+
+    <div class="card">
+        <meter value="60" high="75" low="20" min="0" max="100"></meter>
+        <p>High = 75</p>
+        <hr>
+        <p> low = 20</p>
+        <hr>
+        <p>Current value = 60</p>
+    </div>
+
+    <h1>Dynamic Meter Tag</h1>
+    <div class="card">
+        <meter value="0" min="0" max="100" low="20" high="80" id="meter"></meter>
+        <p>High = 80</p>
+        <hr>
+        <p>low = 20</p>
+        <hr>
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        let meterTag = document.getElementById('meter');
+        let paragraph = document.getElementById('result');
+
+        function incrementmeter(){
+            if(meterTag.value<100){
+                meterTag.value++;
+                paragraph.innerText = 'Current value = ' + meterTag.value
+            }else{
+                paragraph.innerText = 'Limit Reached🎢'
+            }
+        }
+        setInterval(incrementmeter, 100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            background-color: #2a9d8f;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            /* z-index: 100; */
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        nav ul li a:hover {
+            color: #f7c74f;
+            /* text-decoration: underline;
+            text-underline-offset: 5px; */
+        }
+
+        .hero{
+            /* display: flex; */
+            background: linear-gradient(to bottom, #2a9d8f, #264653);
+            /* background-size: cover; */
+        }
+        .left{
+            height: 100vh;
+            flex: 1;
+            padding: 8%;
+            line-height: 1.2;
+        }
+        .subtitle{
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .hero h1{
+            font-size: 3.7rem;
+            /* margin-top: 20px; */
+            color: #ffffff;
+        }
+        .solid-btn{
+            padding: 15px 25px;
+            margin-top: 35px;
+            border: none;
+            font-size: 1rem;
+            background-color: darkgoldenrod;
+            color: #000;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .solid-btn:hover{
+            background-color: rgba(184, 135, 11, 0.864);
+            color: #fff;
+        }
+        .main-container h1{
+            text-align: center;
+            color: #2a9d8f;
+            font-size: 3rem;
+            margin-top: 3%;
+            margin-bottom: 2%;
+        }
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            /* margin-top: 50px; */
+            min-height: 50vh;
+        }
+        .card{
+            background-color: #fafafa;
+            padding: 50px;
+        }
+        .card:hover{
+            border-bottom: 4px solid #2a9d8f;
+            transition: 0.3s;
+        }
+        .card h2{
+            text-align: center;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #2a9d8f;
+        }
+        .card p{
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .card h1{
+            text-align: center;
+            color: darkgoldenrod;
+            font-size: 3.7rem;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .timeline h2{
+            text-align: center;
+            font-size: 3rem;
+            color: #2a9d8f;
+            margin-top: 3%;
+        }
+        h3{
+            font-size: 2rem;
+            color: rgb(199, 146, 13);
+            margin-bottom: 5px;
+        }
+        .module-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .module-list li {
+            background-color: #f0f8ff;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .timeline {
+            margin: 0;
+            padding: 1%;
+            list-style-type: none;
+        }
+        .timeline li {
+            background-color: #ececec;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .testimonials {
+            padding: 40px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .testimonials h2 {
+            margin-bottom: 30px;
+            font-size: 3rem;
+            color: #2a9d8f;
+        }
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .testimonial-card {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+        }
+        .student-name {
+            font-weight: bold;
+            color: #2a9d8f;
+            margin-top: 10px;
+        }
+        .pricing {
+            padding: 40px 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        .pricing h2 {
+            margin-bottom: 30px;
+            font-size: 3rem;
+            color: #2a9d8f;
+        }
+        .pricing .price-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+            margin: 0 15px;
+            width: 300px;
+            border: none;
+        }
+        .pricing .price-card h3 {
+            margin-top: 0;
+            color: #e9c46a;
+        }
+        .pricing .price-card p {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #264653;
+        }
+        .pricing .price-card .cta-button {
+            margin-top: 10px;
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        .pricing .price-card .cta-button:hover {
+            background-color: #e9c46a;
+            color: #264653;
+        }
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #e9c46a;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#curriculum">Curriculum</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero"> 
+        <div class="left">
+            <h1 class="heading"> <br> "Become a Web <br> Developer in 60 Days!" </h1> <br>
+            <p class="subtitle">Learn HTML, CSS, JavaScript & React with hands-on projects.</p>
+            <button class="solid-btn">Enroll Now</button>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <h1>Course Highlights</h1>
+      <div class="card-container">
+        <div class="card">
+            <h1><i class="fa-solid fa-person-chalkboard"></i></h1>
+            <h2> Beginner-friendly lessons</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+
+        <div class="card">
+            <h1><i class="fa-solid fa-diagram-project"></i></h1>
+            <h2> Hands-on coding projects</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+
+        <div class="card">
+           <h1><i class="fa-solid fa-certificate"></i></h1>
+            <h2>Certificate of Completions</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+
+        <div class="card">
+            <h1><i class="fa-solid fa-headset"></i></h1>
+            <h2>24/7 Mentor Support</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="timeline">
+        <h2>Course Timeline</h2>
+        <ul class="timeline">
+            <li>
+                <h3>Week 1-2: HTML & CSS Basics</h3>
+                <p>Learn the foundations of web development by understanding the structure of web pages with HTML and styling them with CSS.</p>
+                <ul class="module-list">
+                    <li>Introduction to HTML: Tags, Elements, Structure</li>
+                    <li>CSS Basics: Selectors, Properties, and Styling</li>
+                    <li>Building Simple Web Pages</li>
+                    <li>Responsive Web Design with Media Queries</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Week 3-4: JavaScript Fundamentals</h3>
+                <p>Master the basics of JavaScript, the programming language of the web, and learn how to add interactivity to your web pages.</p>
+                <ul class="module-list">
+                    <li>JavaScript Syntax and Variables</li>
+                    <li>Functions, Loops, and Conditional Statements</li>
+                    <li>DOM Manipulation and Event Handling</li>
+                    <li>Working with Arrays and Objects</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Week 5-6: React & Modern Web Apps</h3>
+                <p>Learn how to build dynamic and interactive web applications with React, the modern JavaScript framework for building UIs.</p>
+                <ul class="module-list">
+                    <li>Introduction to React: Components and JSX</li>
+                    <li>State and Props</li>
+                    <li>Event Handling and Forms in React</li>
+                    <li>Building Single Page Applications (SPAs) with React</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Final Project: Build & Deploy a Portfolio</h3>
+                <p>Apply everything you’ve learned to build your own portfolio website. You'll integrate HTML, CSS, JavaScript, and React to showcase your skills and projects.</p>
+                <ul class="module-list">
+                    <li>Designing a Portfolio Layout</li>
+                    <li>Integrating React Components</li>
+                    <li>Deploying the Website on GitHub Pages or Netlify</li>
+                    <li>Project Presentation & Reflection</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="testimonials">
+        <h2>Real Student Reviews</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"This course helped me transition from marketing to a developer role in just 60 days! The hands-on projects gave me the confidence to apply for jobs immediately."</p>
+                <div class="student-name">Sarah W., Software Developer</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The course was straightforward and engaging. By the end, I had built a fully functional portfolio site, which helped me land my first web development job!"</p>
+                <div class="student-name">Emily J., Junior Developer</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"I had no prior coding experience. The instructor's support and the structured approach of the curriculum made everything easier to understand!"</p>
+                <div class="student-name">Chris L., Front-End Developer</div>
+            </div>
+        </div>
+    </section>
+
+    <section  class="pricing">
+        <h2>Pricing</h2>
+        <div class="price-card">
+            <h3>Free Trial</h3>
+            <p>₹0</p>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+        <div class="price-card">
+            <h3>Premium Plan</h3>
+            <p>₹4999</p>
+            <button class="cta-button">Enroll Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Web Development Course | <a href="#">Terms</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            background-color: rbg(243, 243, 243);
+            display: flex;
+        }
+        aside{
+            min-height: 100vh;
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+        }
+        .main{
+            min-height: 100vh;
+            background-color: rbg(243, 243, 243);
+            width: 100%;
+            padding: 30px;
+        }
+        aside ul{
+            list-style-type: none;
+        }
+        aside ul li{
+            padding: 6px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        aside ul li a{
+            text-decoration: none;
+            color: #000;
+            font-size: 1.3rem;
+        }
+        aside ul li:hover{
+            background-color: #000;
+        }
+        aside ul li:hover a{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- <center>
+        <h1>ASIDE TAG</h1>
+        <p>the s=aside element represents a section of page that consiosts that is indirectly related to the content arond the aside element, which could be considerd separate from that content such sections are often represented as sidebars in printed typograpy.</p>
+    </center> -->
+
+        <div class="container">
+            <aside>
+                <img src="https://wphtml.com/html/tf/duralux-demo/assets/images/logo-full.png" alt="logo" width="170">
+                <hr>
+                <ul>
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#"></a>Services</li>
+                    <li><a href="#"></a>Contact us</li>
+                    <li><a href="#"></a>Blogs</li>
+                    <li><a href="#"></a>FAQ's</li>
+                </ul>
+            </aside>
+
+            <div class="main">
+                <h1>This is the main content</h1>
+            </div>
+        </div>
+    
+</body>
+</html>

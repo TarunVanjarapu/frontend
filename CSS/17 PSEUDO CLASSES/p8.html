@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+        }
+        .container div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container div:not(.card2){
+            background-color: darkred;
+            color: #fff;
+        }
+        .container div:not(.card4){
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:not(classname/id/html tag)</h1>
+    </center>
+    <hr>
+
+    <section class="container">
+        <div class="card1">
+            <h1>block1</h1>
+        </div>
+        <div class="card2">
+            <h1>block2</h1>
+        </div>
+        <div class="card3">
+            <h1>block3</h1>
+        </div>
+        <div class="card4">
+            <h1>block4</h1>
+        </div>
+    </section>
+</body>
+</html>

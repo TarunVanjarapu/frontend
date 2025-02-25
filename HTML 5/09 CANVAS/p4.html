@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Drawing Circles on Canvas</h1>
+    </center>
+    <hr>
+
+    <canvas id="canvas1" width="500" height="500" style="border: 4px solid #ccc;"></canvas>
+
+    <script>
+        let canvas1 = document.getElementById('canvas1').getContext('2d');
+
+        canvas1.fillStyle = "green";
+
+        // canvas1.arc(100, 100, 90, 0, 2*Math.PI);
+        // canvas1.arc(100, 100, 90, 0, 2*3.14);
+        canvas1.arc(100, 100, 90, 0, 6.28 );//2PI= 2*3.14 = 6.28 we can directly place 2PI value to draw arcs
+        canvas1.fill();
+    </script>
+</body>
+</html>

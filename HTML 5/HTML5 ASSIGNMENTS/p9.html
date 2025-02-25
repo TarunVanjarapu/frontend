@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero{
+            display: flex;
+            background: url(https://html.creativegigstf.com/charles/images/home/slide-1.jpg) no-repeat center;
+            background-size: cover;
+        }
+        .left{
+            height: 100vh;
+            flex: 1;
+            padding: 8%;
+            line-height: 1.2;
+        }
+        .subtitle{
+            font-size: 1.4rem;
+            font-weight: 200;
+        }
+        h1{
+            font-size: 3.7rem;
+            margin-top: 20px;
+            color: #001A57;
+        }
+        .solid-btn{
+            padding: 15px 25px;
+            margin-top: 35px;
+            border: none;
+            font-size: 1rem;
+            background-color: #fff;
+            color: #001A57;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .solid-btn:hover{
+            background-color: #001A57;
+            color: #fff;
+        }
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            /* margin-top: 50px; */
+        }
+        .card{
+            background-color: #fafafa;
+            padding: 50px;
+        }
+        .card:hover{
+            border-bottom: 4px solid #001A57;
+            transition: 0.3s;
+        }
+        .card img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .card h2{
+            text-align: center;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .card p{
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .about{
+            display: flex;
+            padding: 100px 150px;
+            gap: 50px;
+        }
+        .aleft h1{
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-top: 0px;
+            text-align: center;
+            color: #000000d1;
+        }
+        .aleft p{
+            font-size: 1.1rem;
+            font-weight: 350;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .matter{
+            background-image: url(https://html.creativegigstf.com/charles/images/home/2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+        }
+        .matter h1{
+            font-size: 2.8rem;
+            color: #001A57;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .matter .solid-btn{
+            background-color: #001A57;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 70px;
+        }
+        .matter .solid-btn:hover{
+            background-color: #010f32;
+            transition: 1s;
+        }
+        .service h1{
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 8%;
+            color: #000000e3;
+        }
+        .service p{
+            font-size: 1.1rem;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .ser-card{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 15px 100px;
+        }
+        .cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 30px;
+            padding: 10px;
+            gap: 20px;
+            /* border: 1px solid #ccc; */
+        }
+        .cards:hover{
+            box-shadow: 0px 0px 5px#ccc;
+            border: none;
+            transition: 0.3s;
+        }
+        .cards h3 a:hover{
+            color: #001A57;
+        }
+        .cards h3{
+            font-size: 1.4rem;
+            /* margin-top: 50px; */
+        }
+        .cards h3 a{
+            color: #000;
+            text-decoration: none;
+        }
+        .cards h4{
+            font-size: 1rem;
+            /* margin-bottom: 20px; */
+        }
+        .cards h4 a{
+            text-decoration: none;
+            color: #001A57;
+        }
+        .cell p{
+            font-size: 1.5rem;
+            margin-bottom: 100px;
+        }
+        .cell a{
+            text-decoration: none;
+            color: #001A57;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+            text-decoration-thickness: 1px;
+        }
+        .info{
+            background-image: url(https://html.creativegigstf.com/charles/images/home/9.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 100px;
+        }
+        .info1{
+            height: 300px;
+            width: 600px;
+            background-color: #fff;
+            align-items: flex-start;
+            padding: 50px;
+        }
+        .info1 p{
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+        .info1 h4{
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        .team{
+            text-align: center;
+            margin-top: 7%;
+        }
+        .team h1{
+            font-size: 2.7rem;
+            padding: 30px;
+            color: #000;
+        }
+        .team p{
+            font-size: 1.1rem;
+            padding: 5px;
+        }
+        .our-team{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            padding: 50px 10%;
+        }
+        .pics:hover{
+            box-shadow: 0px 1px 1px 1px #ccc;
+        }
+        .pics h4{
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .success{
+            background-color: #bae0f127;
+            height: 700px;
+            background-image: url(https://html.creativegigstf.com/charles/images/home/pattern.png);
+            background-repeat: no-repeat;
+            /* background-size: 80%; */
+            background-position: center;
+            object-fit: 80%;
+            text-align: center;
+            padding: 10%;   
+            margin-top: 3%;
+        }
+        .success h1{
+            font-size: 2.5rem;
+            color: #000;
+        }
+        .success p{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #001A57;
+        }
+        .statistics{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 50px 15%;
+            text-align: center;
+        }
+        .numbers h2{
+            font-size: 5rem;
+            font-weight: 300;
+            color: #001A57;
+        }
+        .numbers p{
+            font-size: 1.1rem;
+        }
+        .success .solid-btn{
+            background-color: #001A57;
+            color: #fff;
+        }
+        .success .solid-btn:hover{
+            background-color: #010f32;
+            transition: 1s;
+        }
+        .free h1{
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="left">
+            <p class="subtitle">The government they survive artical of fortune</p>
+            <h1 class="heading">WE IMPROVE YOUR <br> SALES EFFICENCY</h1>
+            <button class="solid-btn">CONTACT US</button>
+        </div>
+    </section>
+
+
+    <div class="card-container">
+        <div class="card">
+            <img src="https://html.creativegigstf.com/charles/images/icon/4.png" alt="">
+            <h2>Marketing Goals</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+
+        <div class="card">
+            <img src="https://html.creativegigstf.com/charles/images/icon/1.png" alt="">
+            <h2>Consumer Insites</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+
+        <div class="card">
+            <img src="https://html.creativegigstf.com/charles/images/icon/2.png" alt="">
+            <h2>Emerging Ideas</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+
+        <div class="card">
+            <img src="https://html.creativegigstf.com/charles/images/icon/3.png" alt="">
+            <h2>Thought Leadership</h2>
+            <p>The east side to a deluxe apartment in move on up to the east side</p>
+        </div>
+    </div>
+
+
+    <div class="about">
+        <div class="aright">
+            <img src="https://html.creativegigstf.com/charles/images/home/1.jpg" alt="">
+        </div>
+        <div class="aleft">
+            <h1>ABOUT OUR COMPANY</h1>
+            <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship <br> today still wanted by the government they survive as soldiers of fortune to a <br> deluxe apartment in the sky moving on up to the east side a family. <br><br>
+
+                The government they survive as soldiers of fortune baby if you've ever <br> wondered the east side to a deluxe apartment.</p>
+        </div>
+        
+            <!-- <i class="fa-light fa-star"></i>
+            <h2>Vision</h2>
+            <i class="fa-light fa-medal"></i>
+            <h2>Missions</h2>
+            <i class="fa-sharp-duotone fa-thin fa-bullseye-arrow"></i>
+            <h2>Goals</h2> -->
+    
+    </div>
+
+
+    <div class="matter">
+        <br><br>
+        <h1>We provide high quality services & innovative <br> solutions for the realiable growth</h1>
+        <button class="solid-btn">GET A QUOTES</button>
+    </div>
+
+
+    <div class="service">
+        <h1>OUR SERVICES</h1>
+        <P>A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers</P>
+        <div class="ser-card">
+            <div class="cards">
+                <img src="https://html.creativegigstf.com/charles/images/home/3.jpg" alt="">
+                <div class="smat">
+                    <h3><a href="#">Business Services</a></h3>
+                    <p>The tiny ship today stiller</p> <br>
+                    <h4><a href="#">READ MORE <i class="fa-solid fa-angle-right"></i></a></h4>
+                </div>
+            </div>
+    
+            <div class="cards">
+                <img src="https://html.creativegigstf.com/charles/images/home/4.jpg" alt="">
+               <div class="smat">
+                    <h3><a href="#">Consumer Product</a></h3>
+                    <p>The tiny ship today stiller</p>
+                    <br>
+                    <h4><a href="#">READ MORE <i class="fa-solid fa-angle-right"></i></a></h4>
+               </div>
+            </div>
+    
+            <div class="cards">
+                <img src="https://html.creativegigstf.com/charles/images/home/5.jpg" alt="">
+                <div class="smat">
+                    <h3><a href="#">Financial Services</a></h3>
+                    <p>The tiny ship today stiller</p>
+                    <br>
+                    <h4><a href="#">READ MORE <i class="fa-solid fa-angle-right"></i></a></h4>
+                </div>
+            </div>
+    
+            <div class="cards">
+                <img src="https://html.creativegigstf.com/charles/images/home/6.jpg" alt="">
+               <div class="smat">
+                    <h3><a href="#">Travel ans Avation</a></h3>
+                    <p>The tiny ship today stiller</p>
+                    <br>
+                    <h4><a href="#">READ MORE <i class="fa-solid fa-angle-right"></i></a></h4>
+               </div>
+            </div>
+    
+            <div class="cards">
+                <img src="https://html.creativegigstf.com/charles/images/home/7.jpg" alt="">
+                <div class="smat">
+                    <h3><a href="#">Software Research</a></h3>
+                    <p>The tiny ship today stiller</p>
+                    <br>
+                    <h4><a href="#">READ MORE <i class="fa-solid fa-angle-right"></i></a></h4>
+                </div>
+            </div>
+    
+            <div class="cards">
+                <img src="https://html.creativegigstf.com/charles/images/home/8.jpg" alt="">
+                <div class="smat">
+                    <h3><a href="#">Quality Resourcing</a></h3>
+                    <p>The tiny ship today stiller</p>
+                    <br>
+                    <h4><a href="#">READ MORE <i class="fa-solid fa-angle-right"></i></a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="cell">
+            <p>You can also send us an email and we’ll get in touch shortly, or Call us <br>
+                <a href="#">info@support.com (or) +1 234 6780 900</a>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="info">
+       <div class="info1">
+        <p> "A tale of a fateful trip that started from the topic port <br> adroad this tiny shiptoday still wanted by the government <br>
+            they survive as soldiers of fortune to a deluxe apartment in <br> the sky moving on up to the east side of a family."
+        </p>
+        <h4>Rashed Ka.</h4>
+        <p>Founder,Mnc Inc.</p>
+    </div>
+    </div>
+
+
+    <div class="team">
+        <h1>OUR TEAM</h1>
+        <p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers</p>
+       <div class="our-team">
+        <div class="pics">
+            <img src="https://html.creativegigstf.com/charles/images/team/1.jpg" alt="">
+            <h4>Richard Mills</h4>
+            <p><i>Sales Consultant</i></p>
+        </div>
+        <div class="pics">
+            <img src="https://html.creativegigstf.com/charles/images/team/2.jpg" alt="">
+            <h4>Mike Hussey</h4>
+            <p><i>Founder, CEO</i></p>
+        </div>
+        <div class="pics">
+            <img src="https://html.creativegigstf.com/charles/images/team/3.jpg" alt="">
+            <h4>Jenilia D’sosa</h4>
+            <p><i>Marketing Lead</i></p>
+        </div>
+        <div class="pics">
+            <img src="https://html.creativegigstf.com/charles/images/team/4.jpg" alt="">
+            <h4>David Warner</h4>
+            <p><i>SEO Analyst</i></p>
+        </div>
+
+       </div>
+    </div>
+    
+
+    <div class="success">
+        <p>COMPANY SUCCESS</p>
+        <h1>Some fun facts about our consulting</h1>
+        <div class="statistics">
+            <div class="numbers">
+                <h2>30+</h2>
+                <p>Years of Excellence</p>
+            </div>
+            <div class="numbers">
+                <h2>100<small>%</small></h2>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="numbers">
+                <h2>53<small>k</small></h2>
+                <p>Cases Completed</p>
+            </div>
+            <div class="numbers">
+                <h2>24</h2>
+                <p>Consultants</p>
+            </div>
+        </div>
+        <button class="solid-btn">VIEW CASE STUDIES</button>
+    </div>
+
+
+    <div class="free">
+        <h1>FREE CONSULTATION</h1>
+        <P>A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers</P>
+
+        <div class="">
+            <img src="https://html.creativegigstf.com/charles/images/home/10.jpg" alt="">
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            padding: 10px;
+            background-color: darkgreen;
+            color: #fff;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .card h1{
+            margin: 0;
+        }
+        .card::before{
+            content: "this is the before";
+            background-color: black;
+            padding: 10px;
+        }
+        .card::after{
+            content: 'this is the after';
+            background-color: red;
+            padding: 10px;
+        }
+
+
+
+        .band{
+            padding: 10px;
+            background: linear-gradient(-45deg, rgb(121, 70, 2), rgb(34, 23, 0));
+            width: 200px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 6px;
+            color: #110a03;
+            margin: auto;
+            margin-top: 50px;
+            -webkit-text-stroke: 1px rgb(126, 98, 38);
+            position: relative;
+            border-bottom: 3px groove #4c2b00;
+            border-top: 3px groove #4c2b00;
+        }
+        .band::before{
+            content: "";
+            border: 24px;
+            border-color: transparent transparent transparent rgb(255, 255, 255);
+            border-style: solid;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .band::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 24px;
+            border-color:transparent rgb(255, 255, 255) transparent transparent;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>::before and ::after</h1>
+    </center>
+    <hr>
+
+    <!-- <div class="card"> -->
+        <!-- <h1>hello world..!</h1> -->
+    <!-- </div> -->
+
+    <div class="band">
+        <span>Friendship</span>
+    </div>
+</body>
+</html>

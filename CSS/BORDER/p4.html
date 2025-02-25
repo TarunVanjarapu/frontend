@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BORDER</title>
+    <style>
+        section{
+            padding: 20px;
+        }
+        section div{
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: aliceblue;
+            margin: auto;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+        .b1{
+            border-width: 50px;
+            border-style: solid;
+            border-image: linear-gradient(45deg, rgb(246, 14, 64), deepskyblue, orange) 1;
+        }
+        .b2{
+            border-width: 50px;
+            border-style: solid;
+            border-image: repeating-linear-gradient(45deg, rgb(28, 6, 9), rgb(50, 18, 210)5%, rgb(184, 161, 17)10%) 30;
+            background-color: #0c0c0c;
+            color: #fff;
+        }
+        .b3{
+            border-width: 50px;
+            border-style: solid;
+            border-image: url(https://media.istockphoto.com/id/1029340324/photo/pink-red-wall-texture.jpg?s=612x612&w=0&k=20&c=9NQNS3sBK6jlbxk3r8pgIDZ08pMYvgdrpAJ7nZlQ44k=)round stretch;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Border Image</h1>
+    </center>
+    <hr>
+
+    <section class="container">
+        <div class="b1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore at nesciunt a atque mollitia voluptate, quas sit libero sapiente dolor repudiandae consequuntur officia consectetur. Quaerat veritatis excepturi eum doloribus?</p>
+        </div>
+
+        <div class="b2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam unde alias id quia nostrum iste laborum in aperiam quis, neque magni error eligendi, ipsam sed. Voluptates expedita cumque laudantium dignissimos.</p>
+        </div>
+
+        <div class="b3">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, facilis beatae distinctio aperiam accusantium, ipsum inventore repellendus, animi eos blanditiis natus esse! Quas id repudiandae, minima nobis quod explicabo ad?
+            </p>
+        </div>
+
+    </section>
+</body>
+</html>

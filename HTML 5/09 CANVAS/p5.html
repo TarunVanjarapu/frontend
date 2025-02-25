@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Creating multiple graphics in a single canvas using beginPath() --> to start new graphics in a same canvas and closePath()--> to close the graphics and to start new graphics</h1>
+    </center>
+    <hr>
+    <canvas id="canvas1" width="700" height="500" style="border: 3px solid#000;"></canvas>
+
+    <script>
+        let canvas1 = document.getElementById('canvas1').getContext('2d');
+
+        canvas1.beginPath();//starting path
+        canvas1.fillStyle = "green";
+        canvas1.fillRect(100, 100, 200, 100);
+        canvas1.closePath();//closing path
+
+
+        canvas1.beginPath();
+        canvas1.fillStyle = "orange";
+        canvas1.arc(100, 100, 50, 0, 2*3.14);// x,y, radius, starting, PI
+        canvas1.closePath();
+
+
+        canvas1.beginPath();
+        canvas1.strokeStyle = "blue";
+        canvas1.lineWidth = 5;
+        canvas1.strokeRect(100,300, 100, 100);
+        canvas1.closePath();
+    </script>
+</body>
+</html>

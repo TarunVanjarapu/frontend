@@ -1,0 +1,268 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .container{
+                background-color: rgb(0, 130, 69);
+                min-height: 100vh;
+                padding: 30px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            form{
+                width: 60%;
+                background-color: white;
+                min-height: 50vh;
+                padding: 30px;
+                margin: auto;
+            }
+            input{
+                padding: 10px;
+                font-size: 16px;
+                width: 100%;
+                border: none;
+                outline: none;
+                border: 1px solid #ccc;
+                margin-top: 3px;
+            }
+            input[ type="checkbox"], input[type='radio']{
+                width: fit-content;
+                accent-color: rgb(0, 130, 69);
+            }
+            input:hover{
+                background-color: rgba(31, 197, 119, 0.142);
+            }
+            fieldset{
+                padding: 30px;
+            }
+            legend{
+                color: rgb(0, 130, 69);
+            }
+
+            .btn1, .btn2, .btn3{
+                border: none;
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 1rem;
+                background-color: rgb(0, 130, 69);
+                color: #fff;
+            }
+           input[type='color']{
+                height: 60px;
+            }
+            input[type='range']{
+                accent-color: rgb(0, 130, 69);
+            }
+            input[type='image']{
+                width: 70px;
+                border-radius: 100px;
+                display: block;
+                margin: auto;
+            }
+            .btn2{
+                background-color: rgb(190, 0, 32);
+                min-width: 150px;
+            }
+
+            .btn3{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>input</h1>
+        </center>
+        <hr>
+
+        <div class="container">
+            <form>
+                <p>type, name, id, placeholder, required, readonly min max minlength maxlength disabled value</p>
+                <fieldset>
+                    <legend>Text</legend>
+                    <label for="username">Enter your name</label>
+                    <input type="text" placeholder="Enter any text numbers, letters, symbols" required name="username" id="username" minlength="8" maxlength="10">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Email</legend>
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Enter your email" required name="email" id="email">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Password</legend>
+
+                    <label for="password">password</label>
+                    <input type="password" placeholder="Enter your password" id="password" name="password" required disabled>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Number</legend>
+
+                    <label for="number">Number</label>
+                    <input type="number" placeholder="Enter Quantity" id="number" name="number" required min="5" max="10">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account number</legend>
+
+                    <label for="acc">Account number</label>
+                    <input type="text" placeholder="Your Account number" id="acc" name="acc" required value="AC8376737332" readonly>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Date</legend>
+                    <label for="date">Select your birth date</label>
+                    <input type="date" name="birthday" id="date" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datetime</legend>
+                    <label for="datetime">date with Time</label>
+                    <input type="datetime" placeholder="dd/mm/yyyy, hh:mm:ss" id="datetime">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datetime Local</legend>
+                    <label for="datetime-local">date with Time</label>
+                    <input type="datetime-local" id="datetime-local" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Checkbox</legend>
+                    
+                    <label for="langauge">Select instrested languages</label> <br> <hr>
+                    <input type="checkbox" name="language" id="">
+                    <label for="kannada">Kannada</label>
+
+                    <input type="checkbox" name="language" id="english">
+                    <label for="english">English</label>
+
+                    <input type="checkbox" name="language" id="telugu">
+                    <label for="telugu">Telugu</label>
+
+                    <input type="checkbox" name="language" id="hindi">
+                    <label for="hindi">Hindi</label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Radio</legend>
+                    <label for="gender">Gender</label> <br> <hr>
+
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Color</legend>
+
+                    <label for="color"><Select> Product Color</Select></label>
+                    <input type="color" name="color" id="color">
+                </fieldset>
+
+                <fieldset>
+                    <legend>File</legend>
+
+                    <label for="file">Select your profile</label>
+                    <input type="file" name="profile" id="file">
+                </fieldset>
+
+                <Fieldset>
+                    <legend>Range</legend>
+
+                    <label for="brightness">Brightness</label>
+                    <input type="range" name="brightness" id="brightness" min="0" max="100" value="90"> <br> <hr>
+
+                    <label for="contrast">Contrast</label>
+                    <input type="range" name="contrast" id="contrast" min="0" max="100" value="40"> <br> <hr>
+
+                    <label for="saturation">Saturation</label>
+                    <input type="range" name="saturation" id="saturation" min="0" max="100" value="30">
+                </Fieldset>
+
+                <Fieldset>
+                    <legend>Url</legend>
+
+                    <label for="url">Website URL</label>
+                    <input type="url" placeholder="https://example.com" name="wweburl" id="url" required>
+                </Fieldset>
+
+                <fieldset>
+                    <legend>Search</legend>
+                    
+                    <label for="search">Search</label>
+                    <input type="search" placeholder="Search here..." required id="search" name="seartchedvalue">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Week</legend>
+                    
+                    <label for="week">Select Assignment submission week</label>
+                    <input type="week" required id="week" name="assignment_date">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Month</legend>
+                    
+                    <label for="month">Select your Exam month</label>
+                    <input type="month" required id="month" name="exam_month">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Image</legend>
+                    <input type="image" src="https://cdn-icons-png.freepik.com/256/10924/10924424.png?ga=GA1.1.1538238808.1729515699&semt=ais_hybrid" alt="send image" >
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tel</legend>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" placeholder="+00 000-0000-000" name="phonenumber" id="phone">
+                </fieldset>
+                <fieldset>
+                    <legend>Hidden</legend>
+                    <label for="amount">Total Amount</label>
+                    <input type="hidden" value="20,0000/-" name="amount" id="amount" placeholder="Total amount" readonly disabled>
+                </fieldset>
+
+                <fieldset>
+                    <legend>input buttons</legend>
+
+                    <label for="submit">Submit</label>
+                    <input type="submit" value="Create account" id="submit"> <br> <hr>
+
+                    <label for="reset">Reset</label>
+                    <input type="reset" value="Cancel" id="reset"> <br> <hr>
+
+                    <label for="button">Button</label>
+                    <input type="button" value="Default button" id="button">
+                </fieldset>
+
+                <Fieldset>
+                    <legend>button tags</legend>
+
+                    <label for="submit">Submit</label> <br>
+                    <button type="submit" class="btn1">Create account</button>
+
+                    <br>
+                    <br>
+
+                    <label for="reset">Reset</label> <br>
+                    <button type="reset" class="btn2">Cancel</button>
+
+                    <br>
+                    <br>
+
+                    <label for="button">Button</label> <br>
+                    <button type="button" class="btn3">Default button</button>
+                </Fieldset>
+
+
+                <button type="submit" class="btn1">Create Account</button>
+            </form>
+        </div>
+    </body>
+</html>

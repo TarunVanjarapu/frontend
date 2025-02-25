@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMANTIC ELEMENTS</title>
+</head>
+<body>
+    <!-- <center>
+        <h1>Dialog Tag...!</h1>
+        <p>the dialog tag represents a part of aplication that a user inetracts with to perform a task.For example a dialog box, inspector, or window</p>
+    </center> -->
+
+    <button onclick="displayPopup()">login</button>
+
+    <dialog id="popup1">
+        <h1>This is the dialog box or popup</h1>
+        <button onclick="HidePopup()">Close</button>
+    </dialog>
+
+
+    <script>
+        let popup1 = document.getElementById('popup1');
+        // to show dialog box in js we can use dialogtag.showModel()
+        function displayPopup(){
+            popup1.showModl();
+        }
+        function HidePopup(){
+            popup1.close();
+        }
+    </script>
+</body>
+</html>

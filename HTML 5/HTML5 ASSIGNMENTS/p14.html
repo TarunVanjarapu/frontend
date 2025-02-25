@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Become a Web Developer in 60 Days!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        /* Nav Bar */
+        nav {
+            background-color: #2a9d8f;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        nav ul li a:hover {
+            color: #e9c46a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #2a9d8f, #264653);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            background-color: #e9c46a;
+            color: #264653;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #f4a261;
+            color: white;
+        }
+
+        /* Course Highlights */
+        .highlights {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .highlights h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #2a9d8f;
+        }
+        .highlights ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .highlights ul li {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #264653;
+        }
+
+        /* Curriculum Overview */
+        .curriculum {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        .curriculum h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #2a9d8f;
+        }
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .timeline div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .timeline div h3 {
+            margin-top: 0;
+            color: #e9c46a;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 40px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .testimonials h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #264653;
+        }
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .testimonial-card {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+        }
+        .student-name {
+            font-weight: bold;
+            color: #2a9d8f;
+            margin-top: 10px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 40px 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        .pricing h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #264653;
+        }
+        .pricing .price-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+            margin: 0 15px;
+            width: 250px;
+        }
+        .pricing .price-card h3 {
+            margin-top: 0;
+            color: #e9c46a;
+        }
+        .pricing .price-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #264653;
+        }
+        .pricing .price-card .cta-button {
+            margin-top: 10px;
+            background-color: #2a9d8f;
+            color: white;
+        }
+        .pricing .price-card .cta-button:hover {
+            background-color: #e9c46a;
+            color: #264653;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #e9c46a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#curriculum">Curriculum</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Become a Web Developer in 60 Days!</h1>
+        <p>Learn HTML, CSS, JavaScript & React with hands-on projects.</p>
+        <button class="cta-button">Enroll Now</button>
+    </section>
+
+    <!-- Course Highlights -->
+    <section id="highlights" class="highlights">
+        <h2>Course Highlights</h2>
+        <ul>
+            <li>✅ Beginner-friendly lessons</li>
+            <li>✅ Hands-on coding projects</li>
+            <li>✅ Certificate of Completion</li>
+            <li>✅ 24/7 Mentor Support</li>
+        </ul>
+    </section>
+
+    <!-- Curriculum Overview -->
+    <section id="curriculum" class="curriculum">
+        <h2>Curriculum Overview</h2>
+        <div class="timeline">
+            <div>
+                <h3>Week 1-2: HTML & CSS Basics</h3>
+                <p>Learn how to structure and style web pages using HTML and CSS.</p>
+                <ul class="module-list">
+                    <li>Introduction to HTML: Tags, Elements, Structure</li>
+                    <li>CSS Basics: Selectors, Properties, and Styling</li>
+                    <li>Building Simple Web Pages</li>
+                    <li>Responsive Web Design with Media Queries</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Week 3-4: JavaScript Fundamentals</h3>
+                <p>Understand the core concepts of JavaScript to make your web pages interactive.</p>
+                <ul class="module-list">
+                    <li>JavaScript Syntax and Variables</li>
+                    <li>Functions, Loops, and Conditional Statements</li>
+                    <li>DOM Manipulation and Event Handling</li>
+                    <li>Working with Arrays and Objects</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Week 5-6: React & Modern Web Apps</h3>
+                <p>Build dynamic and scalable web apps using React.js, a powerful JavaScript library.</p>
+                <ul class="module-list">
+                    <li>Introduction to React: Components and JSX</li>
+                    <li>State and Props</li>
+                    <li>Event Handling and Forms in React</li>
+                    <li>Building Single Page Applications (SPAs) with React</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Final Project: Build & Deploy a Portfolio</h3>
+                <p>Create your personal portfolio and deploy it online for the world to see!</p>
+                <ul class="module-list">
+                    <li>Designing a Portfolio Layout</li>
+                    <li>Integrating React Components</li>
+                    <li>Deploying the Website on GitHub Pages or Netlify</li>
+                    <li>Project Presentation & Reflection</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <h2>Real Student Reviews</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"This course helped me transition from marketing to a developer role in just 60 days! The hands-on projects gave me the confidence to apply for jobs immediately."</p>
+                <div class="student-name">Sarah W., Software Developer</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The course was straightforward and engaging. By the end, I had built a fully functional portfolio site, which helped me land my first web development job!"</p>
+                <div class="student-name">Emily J., Junior Developer</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"I had no prior coding experience. The instructor's support and the structured approach of the curriculum made everything easier to understand!"</p>
+                <div class="student-name">Chris L., Front-End Developer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <div class="price-card">
+            <h3>Free Trial</h3>
+            <p>₹0</p>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+        <div class="price-card">
+            <h3>Premium Plan</h3>
+            <p>₹4999</p>
+            <button class="cta-button">Enroll Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Web Development Course | <a href="#">Terms</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
